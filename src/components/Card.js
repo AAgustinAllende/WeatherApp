@@ -60,7 +60,7 @@ const Card = ({loadingData, showData, weather, forecast}) => {
                                 <h3 className='card-title'>{weather.name}</h3>
                                 <p className='card-date'>{date}</p>
                                 <h1 className='card-temp'>{(weather.main.temp -273.15).toFixed(1)}°C</h1>
-                                <p className='card-desc'><img src={iconUrl} alt='icon'></img>{weather.weather[0].description}</p>
+                                <p className='card-desc'><img src={iconUrl} alt={weather.weather[0].description}></img>{weather.weather[0].description}</p>
                             </div>
                             <div className='col-md-8 abc'>
                                 <div className='card-body text-start mt-2'>
@@ -74,17 +74,17 @@ const Card = ({loadingData, showData, weather, forecast}) => {
                                     <div className='row mt-4'>
                                         <div className='col'>
                                             <p>{forecastDate3}h</p>
-                                            <p className='description'><img src={iconUrl3}></img>{forecast.list[1].weather[0].description}</p> 
+                                            <p className='description'><img src={iconUrl3} alt={forecast.list[1].weather[0].description}></img>{forecast.list[1].weather[0].description}</p> 
                                             <p className='temp'>{(forecast.list[1].main.temp -273.15).toFixed(1)}°C</p>                                  
                                         </div>
                                         <div className='col'>
                                             <p>{forecastDate6}h</p>
-                                            <p className='description'><img src={iconUrl6}></img>{forecast.list[2].weather[0].description}</p> 
+                                            <p className='description'><img src={iconUrl6} alt={forecast.list[2].weather[0].description}></img>{forecast.list[2].weather[0].description}</p> 
                                             <p className='temp'>{(forecast.list[2].main.temp -273.15).toFixed(1)}°C</p>                                  
                                         </div>
                                         <div className='col'>
                                             <p>{forecastDate9}h</p>
-                                            <p className='description'><img src={iconUrl9}></img>{forecast.list[3].weather[0].description}</p> 
+                                            <p className='description'><img src={iconUrl9} alt={forecast.list[3].weather[0].description}></img>{forecast.list[3].weather[0].description}</p> 
                                             <p className='temp'>{(forecast.list[3].main.temp -273.15).toFixed(1)}°C</p>                                  
                                         </div>
                                     </div>
