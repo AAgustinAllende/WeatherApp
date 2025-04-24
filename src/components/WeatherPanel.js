@@ -11,11 +11,9 @@ const WeatherPanel = () => {
     const [forecast, setForecast] = useState([]);
     const [loading, setLoading] = useState(false);
     const [show, setShow] = useState(false);
-    const [location, setLocation] = useState("");
 
     const getLocation = async (loc) => {
         setLoading(true);
-        setLocation(loc);
 
         try {
             const weatherResponse = await fetch(urlWeather + cityUrl + loc);
